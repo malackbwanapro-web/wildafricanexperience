@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Wild African Experience | Luxury Safari & Beach Holidays</title>
+    <meta name="description" content="Kenya's premier luxury tours and travel company. Bespoke bush-to-beach safaris from Diani Beach to Maasai Mara. Private charters, five-star lodges, tailor-made journeys." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+    <!-- ========================
+    NAVIGATION
+    ======================== -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <img src="images/logo.jpg" alt="The Wild African Experience Logo" />
+                <div>
+                    <div class="nav-logo-text">The Wild African</div>
+                    <div class="nav-logo-sub">Experience</div>
+                </div>
+            </a>
+
+            <div class="nav-links">
+                <a href="#experiences" class="nav-link">Experiences</a>
+                <a href="#retreats" class="nav-link">Corporate</a>
+                <a href="#journey" class="nav-link">The Journey</a>
+                <a href="#contact" class="nav-cta">Design Your Trip</a>
+            </div>
+
+            <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#experiences" class="mobile-nav-link" onclick="closeMobileNav()">Experiences</a>
+        <a href="#retreats" class="mobile-nav-link" onclick="closeMobileNav()">Corporate</a>
+        <a href="#journey" class="mobile-nav-link" onclick="closeMobileNav()">The Journey</a>
+        <a href="#testimonials" class="mobile-nav-link" onclick="closeMobileNav()">Testimonials</a>
+        <a href="#contact" class="mobile-nav-link" onclick="closeMobileNav()">Contact</a>
+        <a href="#contact" class="mobile-nav-cta" onclick="closeMobileNav()">Design Your Trip</a>
+    </div>
+
+    <!-- ========================
+    HERO - BLOCK 1
+    ======================== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-tagline">Luxury Safari & Beach Holidays</p>
+            <h1 class="hero-title">From the Heart of the <em>Savanna</em> to the Edge of the <em>Ocean</em></h1>
+            <p class="hero-sub">Based on the white sands of Diani Beach, we craft seamless private journeys connecting Kenya's most exclusive wildlife conservancies with Africa's premier luxury coastline.</p>
+            <a href="#contact" class="hero-cta">
+                Design Your Experience
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+        <div class="hero-scroll" onclick="document.getElementById('authority').scrollIntoView({behavior:'smooth'})">
+            <div class="hero-scroll-line"></div>
+            <span>Discover</span>
+        </div>
+    </section>
+
+    <!-- ========================
+    AUTHORITY STATEMENT - BLOCK 2
+    ======================== -->
+    <section class="authority" id="authority">
+        <div class="container authority-inner reveal">
+            <p class="authority-label">The Diani Difference</p>
+            <p class="authority-text">Based on the white sands of Diani, we construct seamless private flight corridors connecting Kenya's most exclusive wildlife conservancies with Africa's premier luxury coastline. No third parties. No rigid templates. Just raw, unfiltered luxury.</p>
+            <div class="authority-divider"></div>
+            <a href="#experiences" class="authority-cta">
+                Explore Our Circuits
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- ========================
+    CIRCUIT SELECTOR - BLOCK 3
+    ======================== -->
+    <section class="circuits" id="experiences">
+        <!-- Ambient Background Orbs -->
+        <div class="experiences-orb orb-gold"></div>
+        <div class="experiences-orb orb-sky"></div>
+
+        <div class="container-wide">
+            <div class="circuits-header reveal">
+                <p class="circuits-label">Elite Journeys &amp; Perspectives</p>
+                <h2 class="circuits-title">Choose Your Experience</h2>
+            </div>
+
+            <div class="experiences-split-grid">
+                <!-- COLUMN 1: EPIC BUSH SAFARIS -->
+                <div class="experience-column reveal reveal-delay-1">
+                    <div class="column-header-group">
+                        <span class="column-category-tag">Wildlife &amp; Wilderness</span>
+                        <h3 class="column-category-title">Epic Bush Safaris</h3>
+                    </div>
+                    <div class="column-banner-image-container">
+                        <img src="images/circuit-bush.jpg" alt="Luxury Safari in the Maasai Mara Savanna" loading="lazy" />
+                    </div>
+                    <div class="cards-stack">
+                        
+                        <!-- CARD 1: TSAVO -->
+                        <div class="premium-experience-card epic-card">
+                            <div class="card-header-group">
+                                <h4 class="card-title">Tsavo: Wild &amp; Untamed</h4>
+                                <span class="card-tagline">Authentic Wilderness</span>
+                            </div>
+                            <p class="card-desc">Discover Kenya’s grandest wilderness in absolute privacy. Traverse the red-dirt tracks of Tsavo in your dedicated, custom-tailored Land Cruiser. An authentic, raw luxury escape.</p>
+                            <div class="card-meta-list">
+                                <div class="card-meta-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    <span class="meta-label">Duration:</span>
+                                    <span class="meta-val">3 Days / 2 Nights</span>
+                                </div>
+                                <div class="card-meta-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                    <span class="meta-label">Investment:</span>
+                                    <span class="meta-val">From €900 per person</span>
+                                </div>
+                            </div>
+                            <div class="card-action-bar">
+                                <a href="epic-bush-safaris.html#tsavo" class="experience-btn">
+                                    Explore Experience
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- CARD 2: LAIKIPIA -->
+                        <div class="premium-experience-card epic-card">
+                            <div class="card-header-group">
+                                <h4 class="card-title">Laikipia: The Sovereign Frontier</h4>
+                                <span class="card-tagline">Exclusive Estates</span>
+                            </div>
+                            <p class="card-desc">Where conservation meets ultra-exclusive luxury. Design your perfect bush retreat in Kenya's premier private conservancies, paired with a private Land Cruiser and world-class estate living.</p>
+                            <div class="card-meta-list">
+                                <div class="card-meta-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    <span class="meta-label">Duration:</span>
+                                    <span class="meta-val">3 Days / 2 Nights</span>
+                                </div>
+                                <div class="card-meta-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                    <span class="meta-label">Investment:</span>
+                                    <span class="meta-val">Tailored to your preferred accommodation</span>
+                                </div>
+                            </div>
+                            <div class="card-action-bar">
+                                <a href="epic-bush-safaris.html#laikipia" class="experience-btn">
+                                    Explore Experience
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- CARD 3: MASAI MARA -->
+                        <div class="premium-experience-card epic-card">
+                            <div class="card-header-group">
+                                <h4 class="card-title">Masai Mara: The Definitive Safari</h4>
+                                <span class="card-tagline">The Theater of the Wild</span>
+                            </div>
+                            <p class="card-desc">The crown jewel of East Africa, experienced without compromise. Witness the world's greatest wildlife theater from the comfort of a private Land Cruiser, returning to elite camp luxury each evening.</p>
+                            <div class="card-meta-list">
+                                <div class="card-meta-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    <span class="meta-label">Duration:</span>
+                                    <span class="meta-val">3 Days / 2 Nights</span>
+                                </div>
+                                <div class="card-meta-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                    <span class="meta-label">Investment:</span>
+                                    <span class="meta-val">From €1,500 per person sharing</span>
+                                </div>
+                            </div>
+                            <div class="card-action-bar">
+                                <a href="epic-bush-safaris.html#masai-mara" class="experience-btn">
+                                    Explore Experience
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- COLUMN 2: UNIQUE EXPERIENCES -->
+                <div class="experience-column reveal reveal-delay-2">
+                    <div class="column-header-group">
+                        <span class="column-category-tag">Excursions &amp; Perspectives</span>
+                        <h3 class="column-category-title">Unique Experiences</h3>
+                    </div>
+                    <div class="column-banner-image-container">
+                        <img src="images/gallery-bush-dinner.jpg" alt="Private Luxury Candlelit Dinner Under the Stars" loading="lazy" />
+                    </div>
+                    <div class="cards-stack">
+                        
+                        <!-- CARD 1: BALLOON SAFARI -->
+                        <div class="premium-experience-card unique-card">
+                            <div class="card-header-group">
+                                <h4 class="card-title">The Mara Balloon Safari</h4>
+                                <span class="card-tagline">Aerial Sunrise</span>
+                            </div>
+                            <p class="card-desc">Ascend before dawn and drift silently over the sweeping plains of the Masai Mara as the wild awakens beneath you. Conclude with a champagne bush breakfast.</p>
+                            <div class="card-meta-list">
+                                <div class="card-meta-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    <span class="meta-label">Duration:</span>
+                                    <span class="meta-val">3 Hours</span>
+                                </div>
+                                <div class="card-meta-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                    <span class="meta-label">Investment:</span>
+                                    <span class="meta-val">Custom Tailored</span>
+                                </div>
+                            </div>
+                            <div class="card-action-bar">
+                                <a href="unique-experiences.html#balloon" class="experience-btn">
+                                    Explore Experience
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- CARD 2: HORSEBACK SAFARIS -->
+                        <div class="premium-experience-card unique-card">
+                            <div class="card-header-group">
+                                <h4 class="card-title">Laikipia Horseback Safaris</h4>
+                                <span class="card-tagline">Equestrian Adventure</span>
+                            </div>
+                            <p class="card-desc">Canter alongside giraffes and zebras. Leave the noise of engines behind for an intimate, equestrian journey through Kenya’s most scenic private conservancies.</p>
+                            <div class="card-meta-list">
+                                <div class="card-meta-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    <span class="meta-label">Duration:</span>
+                                    <span class="meta-val">2 - 4 Hours</span>
+                                </div>
+                                <div class="card-meta-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                    <span class="meta-label">Investment:</span>
+                                    <span class="meta-val">Custom Tailored</span>
+                                </div>
+                            </div>
+                            <div class="card-action-bar">
+                                <a href="unique-experiences.html#equestrian" class="experience-btn">
+                                    Explore Experience
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- CARD 3: HELICOPTER SAFARIS -->
+                        <div class="premium-experience-card unique-card">
+                            <div class="card-header-group">
+                                <h4 class="card-title">Remote Helicopter Safaris</h4>
+                                <span class="card-tagline">Untamed Frontiers</span>
+                            </div>
+                            <p class="card-desc">Soar above the dramatic landscapes of Mount Kenya, the Suguta Valley, or the Jade Sea. Touch down in untouched wilderness unreachable by any other means.</p>
+                            <div class="card-meta-list">
+                                <div class="card-meta-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    <span class="meta-label">Duration:</span>
+                                    <span class="meta-val">2 Hours</span>
+                                </div>
+                                <div class="card-meta-item">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                    <span class="meta-label">Investment:</span>
+                                    <span class="meta-val">Custom Tailored</span>
+                                </div>
+                            </div>
+                            <div class="card-action-bar">
+                                <a href="unique-experiences.html#helicopter" class="experience-btn">
+                                    Explore Experience
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================
+    GALLERY STRIP
+    ======================== -->
+    <section class="gallery" id="gallery">
+        <div class="gallery-item reveal reveal-delay-1">
+            <img src="images/gallery-leopard.jpg" alt="Leopard in Maasai Mara" loading="lazy" />
+            <div class="gallery-item-overlay">
+                <span class="gallery-item-caption">Maasai Mara &mdash; Big Five Country</span>
+            </div>
+        </div>
+        <div class="gallery-item reveal reveal-delay-2">
+            <img src="images/gallery-aerial-diani.jpg" alt="Aerial view of Diani Beach" loading="lazy" />
+            <div class="gallery-item-overlay">
+                <span class="gallery-item-caption">Diani Beach &mdash; Turquoise Paradise</span>
+            </div>
+        </div>
+        <div class="gallery-item reveal reveal-delay-3">
+            <img src="images/gallery-bush-dinner.jpg" alt="Candlelit bush dinner" loading="lazy" />
+            <div class="gallery-item-overlay">
+                <span class="gallery-item-caption">Bush Dining &mdash; Under African Stars</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================
+    CORPORATE RETREATS & TEAM BUILDING
+    ======================== -->
+    <section class="retreats" id="retreats">
+        <div class="container reveal">
+            <div class="retreats-grid">
+                <div class="retreats-content">
+                    <p class="retreats-label">Exclusive Corporate Sanctuary</p>
+                    <h2 class="retreats-title">Executive Retreats &amp; High-Performance Team Building</h2>
+                    <p class="retreats-text">Escape the boardroom gridlock. Bring your executive team to a setting where vast horizons inspire bold thinking. From state-of-the-art beachfront workspaces in Diani to wilderness strategizing in private Mara conservancies, we combine absolute privacy with flawless execution.</p>
+
+                    <div class="retreats-features">
+                        <div class="retreats-feature">
+                            <div class="retreats-feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="retreats-feature-title">Exclusive Buyouts &amp; Privacy</h3>
+                                <p class="retreats-feature-desc">Complete takeover of ultra-luxury boutique villas or tented camps. Absolute security, non-disclosure compliance, and dedicated team support.</p>
+                            </div>
+                        </div>
+
+                        <div class="retreats-feature">
+                            <div class="retreats-feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="retreats-feature-title">Bespoke Bonding Experiences</h3>
+                                <p class="retreats-feature-desc">Catamaran racing, deep-sea fishing team challenges, bush dinners under the stars, or private wildlife conservation masterclasses.</p>
+                            </div>
+                        </div>
+
+                        <div class="retreats-feature">
+                            <div class="retreats-feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="retreats-feature-title">Seamless Corporate Logistics</h3>
+                                <p class="retreats-feature-desc">Private aircraft charters straight into conservancy airstrips. High-speed Starlink internet, luxury mobile boardrooms, and 24/7 flight monitoring.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 40px;">
+                        <a href="#contact" class="retreats-cta" onclick="selectCorporateRetreat()">
+                            Get Quotation
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="retreats-image">
+                    <img src="images/corporate-retreat.jpg" alt="Luxury Executive Retreat Setup in Diani Beach, Kenya" loading="lazy" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================
+    EXPERIENCE TIMELINE - BLOCK 4
+    ======================== -->
+    <section class="timeline" id="journey">
+        <div class="container">
+            <div class="timeline-header reveal">
+                <p class="timeline-label">How It Works</p>
+                <h2 class="timeline-title">Your Tailor-Made Journey</h2>
+            </div>
+
+            <div class="timeline-grid">
+                <div class="timeline-connector"></div>
+
+                <div class="timeline-step reveal reveal-delay-1">
+                    <div class="timeline-step-number">1</div>
+                    <div class="timeline-step-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                    <h3 class="timeline-step-title">The Discovery Call</h3>
+                    <p class="timeline-step-subtitle">Day 1</p>
+                    <p class="timeline-step-desc">A private consultation with your dedicated Kenya specialist to uncover your travel rhythms, dietary nuances, and pace preferences.</p>
+                </div>
+
+                <div class="timeline-step reveal reveal-delay-2">
+                    <div class="timeline-step-number">2</div>
+                    <div class="timeline-step-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                    </div>
+                    <h3 class="timeline-step-title">The Blueprint Reveal</h3>
+                    <p class="timeline-step-subtitle">Within 48 Hours</p>
+                    <p class="timeline-step-desc">Receive an interactive digital itinerary with aircraft transit times, private guide profiles, and direct lodge availability.</p>
+                </div>
+
+                <div class="timeline-step reveal reveal-delay-3">
+                    <div class="timeline-step-number">3</div>
+                    <div class="timeline-step-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3 class="timeline-step-title">Ground Control</h3>
+                    <p class="timeline-step-subtitle">In-Country</p>
+                    <p class="timeline-step-desc">From JKIA to your final sundowner on Diani Beach, our Diani-based team manages every transit, transfer, and detail.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================
+    TESTIMONIALS
+    ======================== -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="testimonials-header reveal">
+                <p class="testimonials-label">Guest Stories</p>
+                <h2 class="testimonials-title">Experiences That Endure</h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal reveal-delay-1">
+                    <div class="testimonial-stars">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="testimonial-text">"The seamless transition from the intensity of the Mara to the serenity of Diani was orchestrated to perfection. Every detail anticipated before we knew we wanted it."</p>
+                    <div class="testimonial-author">
+                        <div>
+                            <div class="testimonial-name">Catherine & James M.</div>
+                            <div class="testimonial-detail">Sky to Sea Expedition &middot; October 2024</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal reveal-delay-2">
+                    <div class="testimonial-stars">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="testimonial-text">"We've traveled with many luxury operators across four continents. The Wild African Experience stands apart for their Diani-based operational excellence and genuine care."</p>
+                    <div class="testimonial-author">
+                        <div>
+                            <div class="testimonial-name">The Brennan Family</div>
+                            <div class="testimonial-detail">Multi-Gen Safari &middot; December 2024</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal reveal-delay-3">
+                    <div class="testimonial-stars">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <p class="testimonial-text">"Our honeymoon was beyond anything we could have imagined. Private dinners under the stars, exclusive game drives, and a beach finale that felt like our own private island."</p>
+                    <div class="testimonial-author">
+                        <div>
+                            <div class="testimonial-name">Sarah & David O.</div>
+                            <div class="testimonial-detail">Bush & Beach Honeymoon &middot; February 2025</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================
+    FOOTER / CONTACT - BLOCK 5
+    ======================== -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info reveal">
+                    <div class="footer-logo" style="margin-bottom: 24px;">
+                        <img src="images/logo.jpg" alt="The Wild African Experience Logo" style="height: 60px; width: auto; display: block;" />
+                    </div>
+                    <h2 class="footer-info-title">Begin Your Journey</h2>
+                    <p class="footer-info-text">Whether you dream of tracking the Big Five across the Mara or unwinding on Diani's pristine shores, your dedicated specialist is ready to craft your perfect African story.</p>
+
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <p class="footer-contact-label">Phone / WhatsApp</p>
+                            <p class="footer-contact-value"><a href="https://wa.me/254720399712" target="_blank">+254 720 399712</a></p>
+                        </div>
+                    </div>
+
+                    <!-- ===== UPDATED EMAIL HERE ===== -->
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <p class="footer-contact-label">Email</p>
+                            <p class="footer-contact-value"><a href="mailto:info@wildafricanexperience.co.ke">info@wildafricanexperience.co.ke</a></p>
+                        </div>
+                    </div>
+
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <p class="footer-contact-label">Location</p>
+                            <p class="footer-contact-value">Diani Beach, Kenya</p>
+                        </div>
+                    </div>
+
+                    <!-- Facebook Link (already correct) -->
+                    <div class="footer-contact-item">
+                        <div class="footer-contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </div>
+                        <div>
+                            <p class="footer-contact-label">Facebook</p>
+                            <p class="footer-contact-value"><a href="https://www.facebook.com/TheWildAfricanExperience" target="_blank">The Wild African Experience</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-panel reveal reveal-delay-2">
+                    <h3 class="form-title">Design Your Experience</h3>
+                    <p class="form-subtitle">Tell us about your ideal journey. We'll respond within 15-30 minutes.</p>
+
+                    <!-- SUCCESS PANEL -->
+                    <div class="booking-success" id="homepage-success" style="display:none; text-align:center; padding: 48px 24px;">
+                        <div style="width:64px;height:64px;border-radius:50%;background:rgba(73,191,241,0.1);border:1px solid rgba(73,191,241,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;color:var(--color-sky);">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <h3 style="font-family:var(--font-serif);font-size:1.8rem;color:white;margin-bottom:12px;">Inquiry Received</h3>
+                        <p style="font-family:var(--font-sans);font-size:0.95rem;color:rgba(255,255,255,0.7);line-height:1.7;max-width:400px;margin:0 auto;">Your inquiry was received. One of our tour specialists will reach out via your preferred contact method within <strong style="color:var(--color-sky);">15–30 minutes</strong>.</p>
+                    </div>
+
+                    <form id="inquiryForm" onsubmit="handleSubmit(event)">
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label class="form-label" for="field-first-name">First Name <span aria-hidden="true" style="color:var(--color-sky);">*</span></label>
+                                <input type="text" id="field-first-name" class="form-input" placeholder="Your first name" required />
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="field-last-name">Last Name <span aria-hidden="true" style="color:var(--color-sky);">*</span></label>
+                                <input type="text" id="field-last-name" class="form-input" placeholder="Your last name" required />
+                            </div>
+                        </div>
+
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label class="form-label" for="field-email">Email <span aria-hidden="true" style="color:var(--color-sky);">*</span></label>
+                                <input type="email" id="field-email" class="form-input" placeholder="your@email.com" required />
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="field-phone">Phone / WhatsApp <span aria-hidden="true" style="color:var(--color-sky);">*</span></label>
+                                <input type="tel" id="field-phone" class="form-input" placeholder="+254..." required />
+                            </div>
+                        </div>
+
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label class="form-label" for="inquiry-experience">Choose Your Experience <span aria-hidden="true" style="color:var(--color-sky);">*</span></label>
+                                <select id="inquiry-experience" class="form-select" required>
+                                    <option value="" disabled selected>Select experience</option>
+                                    <option value="Corporate Retreat">Corporate Retreat</option>
+                                    <option value="Epic Bush Safaris">Epic Bush Safaris</option>
+                                    <option value="Unique Adventures">Unique Adventures</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="inquiry-travelers">Number of Travelers <span aria-hidden="true" style="color:var(--color-sky);">*</span></label>
+                                <select id="inquiry-travelers" class="form-select" required>
+                                    <option value="" disabled selected>Select travelers</option>
+                                    <option value="1">1 Traveler</option>
+                                    <option value="2">2 Travelers</option>
+                                    <option value="3">3 Travelers</option>
+                                    <option value="4">4 Travelers</option>
+                                    <option value="5">5 Travelers</option>
+                                    <option value="6">6 Travelers</option>
+                                    <option value="7">7 Travelers</option>
+                                    <option value="8">8 Travelers</option>
+                                    <option value="9">9 Travelers</option>
+                                    <option value="10">10 Travelers</option>
+                                    <option value="10+">10+ Travelers</option>
+                                </select>
+                                <p id="travelers-helper" style="display:none;font-family:var(--font-sans);font-size:0.72rem;color:var(--color-ochre);margin-top:6px;">Please specify the exact number of guests in the details box below.</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="inquiry-details">Tell Us More</label>
+                            <textarea id="inquiry-details" class="form-textarea" placeholder="Dream dates, special occasions, dietary requirements, bucket-list species..."></textarea>
+                        </div>
+
+                        <button type="submit" class="form-submit" id="submitBtn">
+                            Submit Inquiry
+                        </button>
+                        <p class="form-disclaimer">Prefer to chat? <a href="https://wa.me/254720399712" target="_blank">Message us on WhatsApp</a> for an instant response.</p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- ===== UPDATED FOOTER BOTTOM: CENTERED, SOCIAL ICONS UPDATED ===== -->
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 The Wild African Experience. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+                <div class="footer-social">
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/TheWildAfricanExperience" target="_blank" aria-label="Facebook">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/thewildafricanexperience/" target="_blank" aria-label="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </a>
+                    <!-- TikTok -->
+                    <a href="https://www.tiktok.com/@visit.diani.beach" target="_blank" aria-label="TikTok">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 15.58a6.34 6.34 0 0 0 3.9 5.89 6.34 6.34 0 0 0 7.53-3.2 6.36 6.36 0 0 0 .68-2.88V9.69a8.8 8.8 0 0 0 4.94 2.16V8.4a5.7 5.7 0 0 1-2.46-1.71z"/></svg>
+                    </a>
+                    <!-- Google My Business (UPDATED SVG) -->
+                    <a href="https://share.google/QbqDPkvxKI27K3Tfr" target="_blank" aria-label="Google My Business">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.545,10.239v3.821h5.445c-0.712,2.315-2.647,3.972-5.445,3.972c-3.332,0-6.033-2.701-6.033-6.032s2.701-6.032,6.033-6.032c1.498,0,2.866,0.549,3.921,1.453l2.814-2.814C17.503,2.988,15.139,2,12.545,2C7.021,2,2.543,6.477,2.543,12s4.478,10,10.002,10c8.396,0,10.249-7.85,9.426-11.748L12.545,10.239z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================
+    FLOATING CALL BUTTON
+    ======================== -->
+    <a href="tel:+254720399712" class="phone-float" aria-label="Call our team">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.42 2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="phone-tooltip">Call our team</span>
+    </a>
+
+    <!-- ========================
+    FLOATING WHATSAPP
+    ======================== -->
+    <a href="https://wa.me/254720399712" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <span class="whatsapp-tooltip">Chat with us</span>
+    </a>
+
+    <!-- ========================
+    JAVASCRIPT
+    ======================== -->
+    <script src="js/script.js"></script>
+</body>
+</html>

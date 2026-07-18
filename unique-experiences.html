@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unique Experiences | The Wild African Experience</title>
+    <meta name="description" content="Unmatched aerial and equestrian safari excursions in Kenya — Masai Mara Hot Air Balloon, Laikipia Horseback Safaris, and Mount Kenya Scenic Helicopter tours." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/safari-page.css" />
+</head>
+<body>
+
+    <!-- ========================
+    NAVIGATION (shared with index)
+    ======================== -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.jpg" alt="The Wild African Experience Logo" />
+                <div>
+                    <div class="nav-logo-text">The Wild African</div>
+                    <div class="nav-logo-sub">Experience</div>
+                </div>
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html#experiences" class="nav-link">Experiences</a>
+                <a href="index.html#retreats" class="nav-link">Corporate</a>
+                <a href="index.html#journey" class="nav-link">The Journey</a>
+                <a href="index.html#contact" class="nav-cta">Design Your Trip</a>
+            </div>
+
+            <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="index.html#experiences" class="mobile-nav-link" onclick="closeMobileNav()">Experiences</a>
+        <a href="index.html#retreats" class="mobile-nav-link" onclick="closeMobileNav()">Corporate</a>
+        <a href="index.html#journey" class="mobile-nav-link" onclick="closeMobileNav()">The Journey</a>
+        <a href="index.html#contact" class="mobile-nav-link" onclick="closeMobileNav()">Contact</a>
+        <a href="index.html#contact" class="mobile-nav-cta" onclick="closeMobileNav()">Design Your Trip</a>
+    </div>
+
+    <!-- ========================
+    PAGE HERO
+    ======================== -->
+    <section class="safari-hero" aria-label="Unique Experiences hero">
+        <div class="safari-hero-bg" style="background-image: url('images/unique-hero.png');"></div>
+        <div class="safari-hero-overlay"></div>
+        <div class="safari-hero-content">
+            <nav class="safari-breadcrumb" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="safari-breadcrumb-sep">›</span>
+                <a href="index.html#experiences">Experiences</a>
+                <span class="safari-breadcrumb-sep">›</span>
+                <span>Unique Experiences</span>
+            </nav>
+            <span class="safari-hero-eyebrow">Unique Experiences — Kenya</span>
+            <h1 class="safari-hero-title">Perspectives<br /><em>Beyond the Ordinary</em></h1>
+            <p class="safari-hero-desc">Three extraordinary excursions that redefine luxury travel in East Africa — showcasing Kenya's breathtaking wild beauty from exclusive aerial and equestrian perspectives.</p>
+        </div>
+        <div class="safari-scroll-hint" aria-hidden="true">
+            <span>Explore Packages</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ========================
+    TRUST STRIP
+    ======================== -->
+    <div class="trust-strip" role="complementary" aria-label="Trust indicators">
+        <div class="trust-strip-inner">
+            <div class="trust-badge">
+                <div class="trust-badge-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <span class="trust-badge-text">100% Private & Customised</span>
+            </div>
+            <div class="trust-divider" aria-hidden="true"></div>
+            <div class="trust-badge">
+                <div class="trust-badge-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </div>
+                <span class="trust-badge-text">Expert Guides & Pilots</span>
+            </div>
+            <div class="trust-divider" aria-hidden="true"></div>
+            <div class="trust-badge">
+                <div class="trust-badge-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+                </div>
+                <span class="trust-badge-text">Champagne Bush Services</span>
+            </div>
+            <div class="trust-divider" aria-hidden="true"></div>
+            <div class="trust-badge">
+                <div class="trust-badge-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span class="trust-badge-text">Elite Flight Connections</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================
+    PACKAGE ANCHOR NAV
+    ======================== -->
+    <nav class="pkg-anchor-nav" id="pkg-anchor-nav" aria-label="Package navigation">
+        <div class="pkg-anchor-nav-inner">
+            <span class="pkg-nav-label">Jump to:</span>
+            <a href="#balloon" class="pkg-nav-pill" aria-label="Balloon Safari package">
+                <span class="pkg-nav-num">01</span> Balloon Safari
+            </a>
+            <a href="#equestrian" class="pkg-nav-pill" aria-label="Equestrian Safari package">
+                <span class="pkg-nav-num">02</span> Equestrian
+            </a>
+            <a href="#helicopter" class="pkg-nav-pill" aria-label="Helicopter Safari package">
+                <span class="pkg-nav-num">03</span> Helicopter
+            </a>
+        </div>
+    </nav>
+
+    <!-- ====================================================
+    PACKAGE 01 — HOT AIR BALLOON
+    ==================================================== -->
+    <section class="package-section balloon-section" id="balloon" aria-labelledby="balloon-title">
+        <div class="package-section-inner">
+
+            <!-- Header -->
+            <div class="pkg-header reveal">
+                <div class="pkg-number-badge" aria-hidden="true">01</div>
+                <div class="pkg-title-group">
+                    <span class="pkg-category-tag">Unique Experience</span>
+                    <h2 class="pkg-title" id="balloon-title">Masai Mara Hot Air<br />Balloon Safari</h2>
+                    <p class="pkg-tagline">Ascend over the theater of the wild as the sun breaks the horizon</p>
+                </div>
+            </div>
+
+            <!-- Layout -->
+            <div class="pkg-layout">
+                <!-- Content Column -->
+                <div class="pkg-content">
+                    <div class="pkg-overview reveal">
+                        <p class="pkg-section-title">Overview</p>
+                        <p>Drift silently over the iconic plains of the Masai Mara. Rising before the dawn, watch the wild awaken from a vantage point hundreds of feet above. Witness majestic wildlife herds casting long morning shadows across the savanna before touching down for a luxurious champagne breakfast in the bush.</p>
+                    </div>
+
+                    <div class="pkg-experience reveal reveal-delay-1">
+                        <p class="pkg-section-title">The Experience</p>
+                        <p>The morning begins in the quiet dark. As the burners roar to life, you lift off into the cool air just as the sun breaks over the horizon. Watch the shadows of elephants and wildebeest sweep across the plains from hundreds of feet up. Upon landing, a white-linen table awaits you in the middle of the savannah for a traditional champagne bush breakfast.</p>
+                    </div>
+
+                    <div class="pkg-meta-strip reveal reveal-delay-2">
+                        <div class="meta-pill">
+                            <span class="meta-pill-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </span>
+                            <span class="meta-pill-label">Duration</span>
+                            <span class="meta-pill-value">Morning (Approx. 3 Hours)</span>
+                        </div>
+                        <div class="meta-pill">
+                            <span class="meta-pill-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                            </span>
+                            <span class="meta-pill-label">Investment</span>
+                            <span class="meta-pill-value">Custom Tailored</span>
+                        </div>
+                    </div>
+
+                    <div class="pkg-inclusions reveal reveal-delay-2">
+                        <p class="pkg-section-title">What's Included</p>
+                        <ul class="inclusions-list" aria-label="Balloon Safari package inclusions">
+                            <li class="inclusion-item">
+                                <span class="inclusion-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                                <span class="inclusion-text">Pre-dawn transfer from your camp to launch site</span>
+                            </li>
+                            <li class="inclusion-item">
+                                <span class="inclusion-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                                <span class="inclusion-text">Briefing by a fully licensed FAA/KCAA commercial pilot</span>
+                            </li>
+                            <li class="inclusion-item">
+                                <span class="inclusion-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                                <span class="inclusion-text">Approximately 1-hour flight over the Mara savanna</span>
+                            </li>
+                            <li class="inclusion-item">
+                                <span class="inclusion-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                                <span class="inclusion-text">Five-star champagne bush breakfast with chef services</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="guest-quote reveal reveal-delay-3">
+                        <blockquote>"Drifting silently above the savanna as the sun rose, then landing to find a white-linen champagne breakfast set up in the wild — an unforgettable morning."</blockquote>
+                        <p class="guest-quote-author">— Elena &amp; Victor, Switzerland</p>
+                    </div>
+
+                    <div class="pkg-cta-row reveal reveal-delay-3">
+                        <button class="pkg-book-btn" id="book-btn-balloon" onclick="toggleBookingForm('balloon')" aria-expanded="false" aria-controls="drawer-balloon">
+                            <span class="btn-label">Book Now</span>
+                            <span class="btn-arrow" aria-hidden="true">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Gallery Column -->
+                <aside class="pkg-gallery" id="balloon-gallery" aria-label="Balloon Safari photo gallery">
+                    <div class="gallery-grid">
+                        <div class="gallery-item" onclick="openLightbox('images/mara-balloon.png','Masai Mara — Sunrise Balloon Flight')" role="button" tabindex="0" aria-label="View Mara balloon image" onkeydown="if(event.key==='Enter') openLightbox('images/mara-balloon.png','Masai Mara — Sunrise Balloon Flight')">
+                            <img src="images/mara-balloon.png" alt="A hot air balloon flying over the Masai Mara plains at sunrise" loading="lazy" />
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('images/balloon-breakfast.png','Masai Mara — Champagne Bush Breakfast')" role="button" tabindex="0" aria-label="View champagne breakfast image" onkeydown="if(event.key==='Enter') openLightbox('images/balloon-breakfast.png','Masai Mara — Champagne Bush Breakfast')">
+                            <img src="images/balloon-breakfast.png" alt="Exclusive white-linen champagne breakfast table setup under an acacia tree" loading="lazy" />
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('images/hero.jpg','Masai Mara — Wide Horizons')" role="button" tabindex="0" aria-label="View Mara plains image" onkeydown="if(event.key==='Enter') openLightbox('images/hero.jpg','Masai Mara — Wide Horizons')">
+                            <img src="images/hero.jpg" alt="Golden plains of the Masai Mara at sunset" loading="lazy" />
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Booking Drawer -->
+            <div class="booking-drawer" id="drawer-balloon" role="region" aria-label="Book the Balloon Safari">
+                <div class="booking-drawer-inner">
+                    <div class="booking-form-card">
+                        <div class="booking-form-body">
+                            <div class="booking-form-header">
+                                <h3 class="booking-form-title">Reserve Your Balloon Safari</h3>
+                                <p class="booking-form-subtitle">Complete the form below and our experience team will respond within 24 hours to coordinate your flight.</p>
+                            </div>
+                            <div class="booking-form-package-tag">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                <span>Masai Mara Hot Air Balloon Safari</span>
+                            </div>
+                            <form class="booking-form" id="form-balloon" novalidate>
+                                <div class="booking-form-grid">
+                                    <div class="form-field-group">
+                                        <label for="balloon-name">Full Name <span aria-hidden="true">*</span></label>
+                                        <input type="text" id="balloon-name" name="name" placeholder="Your full name" required />
+                                    </div>
+                                    <div class="form-field-group">
+                                        <label for="balloon-email">Email Address <span aria-hidden="true">*</span></label>
+                                        <input type="email" id="balloon-email" name="email" placeholder="your@email.com" required />
+                                    </div>
+                                    <div class="form-field-group">
+                                        <label for="balloon-phone">Phone / WhatsApp</label>
+                                        <input type="tel" id="balloon-phone" name="phone" placeholder="+254 700 000 000" />
+                                    </div>
+                                    <div class="form-field-group">
+                                        <label for="balloon-guests">Number of Guests <span aria-hidden="true">*</span></label>
+                                        <select id="balloon-guests" name="guests" required>
+                                            <option value="" disabled selected>Select guests</option>
+                                            <option value="1">1 Guest</option>
+                                            <option value="2">2 Guests</option>
+                                            <option value="3">3 Guests</option>
+                                            <option value="4">4 Guests</option>
+                                            <option value="5+">5+ Guests</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-field-group field-full">
+                                        <label for="balloon-dates">Preferred Date of Flight</label>
+                                        <input type="text" id="balloon-dates" name="dates" placeholder="e.g. 24 October 2025" />
+                                    </div>
+                                    <div class="form-field-group field-full">
+                                        <label for="balloon-notes">Special Dietary Requirements or Occasions</label>
+                                        <textarea id="balloon-notes" name="notes" placeholder="Please specify if this is for a milestone celebration, any dietary requests for breakfast, or accessibility needs…"></textarea>
+                                    </div>
+                                </div>
+                                <div class="booking-form-footer">
+                                    <button type="submit" class="booking-form-submit">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                                        Send Enquiry
+                                    </button>
+                                    <p class="booking-form-note">
+                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                        Your details are private &amp; secure
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="booking-success" role="status" aria-live="polite">
+                            <div class="booking-success-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </div>
+                            <h3>Enquiry Sent!</h3>
+                            <p>Thank you. Our experience specialists will reach out within 24 hours to confirm flight slots and schedule your Mara sunrise adventure.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ====================================================
+    PACKAGE 02 — EQUESTRIAN SAFARIS
+    ==================================================== -->
+    <section class="package-section equestrian-section alt-bg" id="equestrian" aria-labelledby="equestrian-title">
+        <div class="package-section-inner">
+
+            <!-- Header -->
+            <div class="pkg-header reveal">
+                <div class="pkg-number-badge" aria-hidden="true">02</div>
+                <div class="pkg-title-group">
+                    <span class="pkg-category-tag">Unique Experience</span>
+                    <h2 class="pkg-title" id="equestrian-title">Laikipia Equestrian Safaris</h2>
+                    <p class="pkg-tagline">Ride alongside the wild, matching the rhythm of the bush</p>
+                </div>
+            </div>
+
+            <!-- Layout -->
+            <div class="pkg-layout">
+                <!-- Content Column -->
+                <div class="pkg-content">
+                    <div class="pkg-overview reveal">
+                        <p class="pkg-section-title">Overview</p>
+                        <p>Forgo the safari vehicle entirely and experience the African wilderness in its purest form. Riding highly trained thoroughbreds, you'll blend seamlessly into the environment, approaching wildlife far closer than any car allows. Explore vast plateaus and track game alongside expert equestrian guides.</p>
+                    </div>
+
+                    <div class="pkg-experience reveal reveal-delay-1">
+                        <p class="pkg-section-title">The Experience</p>
+                        <p>Forgo the vehicle entirely and blend seamlessly into the wilderness. Riding highly trained thoroughbreds and safari horses, you can approach wildlife far closer than any car allows. Ride across expansive plateaus, track game with expert equestrian guides, and feel the true rhythm of the African bush.</p>
+                    </div>
+
+                    <div class="pkg-meta-strip reveal reveal-delay-2">
+                        <div class="meta-pill">
+                            <span class="meta-pill-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </span>
+                            <span class="meta-pill-label">Duration</span>
+                            <span class="meta-pill-value">Half-Day or Multi-Day Excursions</span>
+                        </div>
+                        <div class="meta-pill">
+                            <span class="meta-pill-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                            </span>
+                            <span class="meta-pill-label">Investment</span>
+                            <span class="meta-pill-value">Custom Tailored</span>
+                        </div>
+                    </div>
+
+                    <div class="pkg-inclusions reveal reveal-delay-2">
+                        <p class="pkg-section-title">What's Included</p>
+                        <ul class="inclusions-list" aria-label="Equestrian Safari package inclusions">
+                            <li class="inclusion-item">
+                                <span class="inclusion-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                                <span class="inclusion-text">Highly trained thoroughbred or safari horses</span>
+                            </li>
+                            <li class="inclusion-item">
+                                <span class="inclusion-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                                <span class="inclusion-text">Professional equestrian guide &amp; armed tracker</span>
+                            </li>
+                            <li class="inclusion-item">
+                                <span class="inclusion-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                                <span class="inclusion-text">Specialized premium riding equipment &amp; safety gear</span>
+                            </li>
+                            <li class="inclusion-item">
+                                <span class="inclusion-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                                <span class="inclusion-text">Mid-ride private luxury picnic or sundowner set up</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="guest-quote reveal reveal-delay-3">
+                        <blockquote>"No vehicle can compare to the feeling of riding a horse alongside a herd of giraffes. You blend in completely, becoming part of the landscape."</blockquote>
+                        <p class="guest-quote-author">— Charles &amp; Sophia, France</p>
+                    </div>
+
+                    <div class="pkg-cta-row reveal reveal-delay-3">
+                        <button class="pkg-book-btn" id="book-btn-equestrian" onclick="toggleBookingForm('equestrian')" aria-expanded="false" aria-controls="drawer-equestrian">
+                            <span class="btn-label">Book Now</span>
+                            <span class="btn-arrow" aria-hidden="true">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Gallery Column -->
+                <aside class="pkg-gallery" id="equestrian-gallery" aria-label="Equestrian Safari photo gallery">
+                    <div class="gallery-grid">
+                        <div class="gallery-item" onclick="openLightbox('images/equestrian-safari.png','Laikipia — Horseback Riding')" role="button" tabindex="0" aria-label="View Laikipia equestrian image" onkeydown="if(event.key==='Enter') openLightbox('images/equestrian-safari.png','Laikipia — Horseback Riding')">
+                            <img src="images/equestrian-safari.png" alt="Riders on horseback moving next to wild giraffes in Laikipia" loading="lazy" />
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('images/laikipia-camp.png','Laikipia — Conservancy Camp')" role="button" tabindex="0" aria-label="View Laikipia camp image" onkeydown="if(event.key==='Enter') openLightbox('images/laikipia-camp.png','Laikipia — Conservancy Camp')">
+                            <img src="images/laikipia-camp.png" alt="Luxury tented camp in Laikipia at twilight" loading="lazy" />
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('images/laikipia-rhino.png','Laikipia — Black Rhino tracking')" role="button" tabindex="0" aria-label="View rhino image" onkeydown="if(event.key==='Enter') openLightbox('images/laikipia-rhino.png','Laikipia — Black Rhino tracking')">
+                            <img src="images/laikipia-rhino.png" alt="Close-up of endangered black rhino in Laikipia conservancy" loading="lazy" />
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Booking Drawer -->
+            <div class="booking-drawer" id="drawer-equestrian" role="region" aria-label="Book the Equestrian Safari">
+                <div class="booking-drawer-inner">
+                    <div class="booking-form-card">
+                        <div class="booking-form-body">
+                            <div class="booking-form-header">
+                                <h3 class="booking-form-title">Reserve Your Horseback Safari</h3>
+                                <p class="booking-form-subtitle">Complete the form below and our equestrian team will contact you to match you with the perfect horses.</p>
+                            </div>
+                            <div class="booking-form-package-tag">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                <span>Laikipia Equestrian Safaris</span>
+                            </div>
+                            <form class="booking-form" id="form-equestrian" novalidate>
+                                <div class="booking-form-grid">
+                                    <div class="form-field-group">
+                                        <label for="equestrian-name">Full Name <span aria-hidden="true">*</span></label>
+                                        <input type="text" id="equestrian-name" name="name" placeholder="Your full name" required />
+                                    </div>
+                                    <div class="form-field-group">
+                                        <label for="equestrian-email">Email Address <span aria-hidden="true">*</span></label>
+                                        <input type="email" id="equestrian-email" name="email" placeholder="your@email.com" required />
+                                    </div>
+                                    <div class="form-field-group">
+                                        <label for="equestrian-phone">Phone / WhatsApp</label>
+                                        <input type="tel" id="equestrian-phone" name="phone" placeholder="+254 700 000 000" />
+                                    </div>
+                                    <div class="form-field-group">
+                                        <label for="equestrian-guests">Number of Riders <span aria-hidden="true">*</span></label>
+                                        <select id="equestrian-guests" name="guests" required>
+                                            <option value="" disabled selected>Select riders</option>
+                                            <option value="1">1 Rider</option>
+                                            <option value="2">2 Riders</option>
+                                            <option value="3">3 Riders</option>
+                                            <option value="4+">4+ Riders</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-field-group">
+                                        <label for="equestrian-level">Riding Experience Level <span aria-hidden="true">*</span></label>
+                                        <select id="equestrian-level" name="riding-level" required>
+                                            <option value="" disabled selected>Select level</option>
+                                            <option value="beginner">Beginner (Walk only)</option>
+                                            <option value="intermediate">Intermediate (Comfortable trot &amp; canter)</option>
+                                            <option value="advanced">Advanced (Highly confident in all paces)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-field-group">
+                                        <label for="equestrian-dates">Preferred Dates</label>
+                                        <input type="text" id="equestrian-dates" name="dates" placeholder="e.g. 10 – 14 November 2025" />
+                                    </div>
+                                    <div class="form-field-group field-full">
+                                        <label for="equestrian-notes">Health Details or Horse Preferences</label>
+                                        <textarea id="equestrian-notes" name="notes" placeholder="Please mention height, weight, riding background, or any special gear requests to help us assign matching horses…"></textarea>
+                                    </div>
+                                </div>
+                                <div class="booking-form-footer">
+                                    <button type="submit" class="booking-form-submit">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                                        Send Enquiry
+                                    </button>
+                                    <p class="booking-form-note">
+                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                        Your details are private &amp; secure
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="booking-success" role="status" aria-live="polite">
+                            <div class="booking-success-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </div>
+                            <h3>Enquiry Sent!</h3>
+                            <p>Thank you. Our equestrian specialists will be in touch within 24 hours to begin tailoring your horseback wilderness experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ====================================================
+    PACKAGE 03 — HELICOPTER SAFARIS
+    ==================================================== -->
+    <section class="package-section helicopter-section" id="helicopter" aria-labelledby="helicopter-title">
+        <div class="package-section-inner">
+
+            <!-- Header -->
+            <div class="pkg-header reveal">
+                <div class="pkg-number-badge" aria-hidden="true">03</div>
+                <div class="pkg-title-group">
+                    <span class="pkg-category-tag">Unique Experience</span>
+                    <h2 class="pkg-title" id="helicopter-title">Scenic Helicopter Safaris<br />of Remote Kenya</h2>
+                    <p class="pkg-tagline">The ultimate expression of exclusive, untamed travel</p>
+                </div>
+            </div>
+
+            <!-- Layout -->
+            <div class="pkg-layout">
+                <!-- Content Column -->
+                <div class="pkg-content">
+                    <div class="pkg-overview reveal">
+                        <p class="pkg-section-title">Overview</p>
+                        <p>Soar above Kenya’s most inaccessible and dramatic terrains. Fly low over volcanic ridges, touch down on Mount Kenya's peaks for morning coffee, or explore the unearthly northern desert dunes. Entirely private and customized, this is safari travel elevated to its absolute peak.</p>
+                    </div>
+
+                    <div class="pkg-experience reveal reveal-delay-1">
+                        <p class="pkg-section-title">The Experience</p>
+                        <p>The ultimate expression of luxury travel. Take off directly from your lodge and fly low over jagged mountain ridges, hidden waterfalls, and volcanic craters. Touch down on the peaks of Mount Kenya for a morning coffee, or explore the surreal, unearthly landscapes of the northern deserts—entirely inaccessible by road.</p>
+                    </div>
+
+                    <div class="pkg-meta-strip reveal reveal-delay-2">
+                        <div class="meta-pill">
+                            <span class="meta-pill-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </span>
+                            <span class="meta-pill-label">Duration</span>
+                            <span class="meta-pill-value">Full Day or Custom Itineraries</span>
+                        </div>
+                        <div class="meta-pill">
+                            <span class="meta-pill-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                            </span>
+                            <span class="meta-pill-label">Investment</span>
+                            <span class="meta-pill-value">Custom Tailored</span>
+                        </div>
+                    </div>
+
+                    <div class="pkg-inclusions reveal reveal-delay-2">
+                        <p class="pkg-section-title">What's Included</p>
+                        <ul class="inclusions-list" aria-label="Helicopter Safari package inclusions">
+                            <li class="inclusion-item">
+                                <span class="inclusion-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                                <span class="inclusion-text">Private state-of-the-art Eurocopter charter</span>
+                            </li>
+                            <li class="inclusion-item">
+                                <span class="inclusion-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                                <span class="inclusion-text">Elite pilot-guide with advanced wilderness tracking experience</span>
+                            </li>
+                            <li class="inclusion-item">
+                                <span class="inclusion-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                                <span class="inclusion-text">Mountain peak &amp; desert crater landing permits</span>
+                            </li>
+                            <li class="inclusion-item">
+                                <span class="inclusion-check" aria-hidden="true"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                                <span class="inclusion-text">Gourmet peak-top hot catering and champagne services</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="guest-quote reveal reveal-delay-3">
+                        <blockquote>"Flying low through the Suguta Valley and landing on a Mount Kenya peak for morning coffee — it was absolute magic, entirely remote, and beautifully executed."</blockquote>
+                        <p class="guest-quote-author">— Marcus &amp; Evelyn, United States</p>
+                    </div>
+
+                    <div class="pkg-cta-row reveal reveal-delay-3">
+                        <button class="pkg-book-btn" id="book-btn-helicopter" onclick="toggleBookingForm('helicopter')" aria-expanded="false" aria-controls="drawer-helicopter">
+                            <span class="btn-label">Book Now</span>
+                            <span class="btn-arrow" aria-hidden="true">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Gallery Column -->
+                <aside class="pkg-gallery" id="helicopter-gallery" aria-label="Helicopter Safari photo gallery">
+                    <div class="gallery-grid">
+                        <div class="gallery-item" onclick="openLightbox('images/helicopter-peaks.png','Mount Kenya — High Peak Landing')" role="button" tabindex="0" aria-label="View Mount Kenya helicopter image" onkeydown="if(event.key==='Enter') openLightbox('images/helicopter-peaks.png','Mount Kenya — High Peak Landing')">
+                            <img src="images/helicopter-peaks.png" alt="Private luxury helicopter parked on the peak of Mount Kenya" loading="lazy" />
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('images/helicopter-suguta.png','Suguta Valley — Volcanic Desert Flight')" role="button" tabindex="0" aria-label="View Suguta Valley helicopter image" onkeydown="if(event.key==='Enter') openLightbox('images/helicopter-suguta.png','Suguta Valley — Volcanic Desert Flight')">
+                            <img src="images/helicopter-suguta.png" alt="A private helicopter flying over the sand dunes and craters of Suguta Valley" loading="lazy" />
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('images/unique-hero.png','Scenic Kenya — Volcanic Lakes')" role="button" tabindex="0" aria-label="View Kenya volcanic lakes image" onkeydown="if(event.key==='Enter') openLightbox('images/unique-hero.png','Scenic Kenya — Volcanic Lakes')">
+                            <img src="images/unique-hero.png" alt="Aerial perspective of volcanic lakes and valleys in Kenya" loading="lazy" />
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Booking Drawer -->
+            <div class="booking-drawer" id="drawer-helicopter" role="region" aria-label="Book the Helicopter Safari">
+                <div class="booking-drawer-inner">
+                    <div class="booking-form-card">
+                        <div class="booking-form-body">
+                            <div class="booking-form-header">
+                                <h3 class="booking-form-title">Coordinate Your Scenic Flight</h3>
+                                <p class="booking-form-subtitle">Complete the form below and our aviation department will contact you to customize your private helicopter route.</p>
+                            </div>
+                            <div class="booking-form-package-tag">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                <span>Scenic Helicopter Safaris of Remote Kenya</span>
+                            </div>
+                            <form class="booking-form" id="form-helicopter" novalidate>
+                                <div class="booking-form-grid">
+                                    <div class="form-field-group">
+                                        <label for="helicopter-name">Full Name <span aria-hidden="true">*</span></label>
+                                        <input type="text" id="helicopter-name" name="name" placeholder="Your full name" required />
+                                    </div>
+                                    <div class="form-field-group">
+                                        <label for="helicopter-email">Email Address <span aria-hidden="true">*</span></label>
+                                        <input type="email" id="helicopter-email" name="email" placeholder="your@email.com" required />
+                                    </div>
+                                    <div class="form-field-group">
+                                        <label for="helicopter-phone">Phone / WhatsApp</label>
+                                        <input type="tel" id="helicopter-phone" name="phone" placeholder="+254 700 000 000" />
+                                    </div>
+                                    <div class="form-field-group">
+                                        <label for="helicopter-guests">Number of Passengers <span aria-hidden="true">*</span></label>
+                                        <select id="helicopter-guests" name="guests" required>
+                                            <option value="" disabled selected>Select passengers</option>
+                                            <option value="1">1 Passenger</option>
+                                            <option value="2">2 Passengers</option>
+                                            <option value="3">3 Passengers</option>
+                                            <option value="4+">4+ Passengers</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-field-group">
+                                        <label for="helicopter-charter-type">Charter Requirement <span aria-hidden="true">*</span></label>
+                                        <select id="helicopter-charter-type" name="charter-type" required>
+                                            <option value="" disabled selected>Select duration</option>
+                                            <option value="single-day">Single-Day Excursion</option>
+                                            <option value="multi-day">Multi-Day Safari Corridor</option>
+                                            <option value="transfer">Lodge-to-Lodge Private Transfer</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-field-group">
+                                        <label for="helicopter-dates">Travel Dates</label>
+                                        <input type="text" id="helicopter-dates" name="dates" placeholder="e.g. 5 – 12 December 2025" />
+                                    </div>
+                                    <div class="form-field-group field-full">
+                                        <label for="helicopter-notes">Route Preferences &amp; Lodging Details</label>
+                                        <textarea id="helicopter-notes" name="notes" placeholder="Please specify your desired destinations (e.g. Mount Kenya peaks, Suguta dunes, Lake Turkana) and where you will be staying…"></textarea>
+                                    </div>
+                                </div>
+                                <div class="booking-form-footer">
+                                    <button type="submit" class="booking-form-submit">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                                        Send Enquiry
+                                    </button>
+                                    <p class="booking-form-note">
+                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                        Your details are private &amp; secure
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="booking-success" role="status" aria-live="polite">
+                            <div class="booking-success-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            </div>
+                            <h3>Enquiry Sent!</h3>
+                            <p>Thank you. Our private aviation team will reach out within 24 hours to design your customized flight corridor and provide pricing details.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================
+    FOOTER CALLOUT
+    ======================== -->
+    <section class="safari-footer-cta" aria-labelledby="footer-cta-title">
+        <div class="safari-footer-cta-inner">
+            <span class="safari-footer-eyebrow">The Wild African Experience</span>
+            <h2 class="safari-footer-title" id="footer-cta-title">Not Sure Which Safari<br />is Right for <em>You?</em></h2>
+            <p class="safari-footer-sub">Our safari specialists have walked every one of these landscapes personally. Tell us your dream and we will design the perfect journey around it — no pressure, no obligation.</p>
+            <div class="safari-footer-actions-container">
+                <div class="safari-footer-actions">
+                    <a href="index.html#contact" class="footer-cta-primary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        Schedule a Callback
+                    </a>
+                    <a href="tel:+254720399712" class="footer-cta-secondary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        Urgent: Call Now
+                    </a>
+                    <a href="https://wa.me/254720399712?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20a%20Unique%20Experience" target="_blank" rel="noopener noreferrer" class="footer-cta-whatsapp">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                        Send WhatsApp Message
+                    </a>
+                </div>
+                <div class="safari-footer-sub-links">
+                    <a href="index.html#experiences" class="footer-cta-ghost">
+                        Explore All Experiences
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================
+    LIGHTBOX
+    ======================== -->
+    <div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close lightbox">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="Expanded gallery image" />
+        <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+
+    <!-- ========================
+    WHATSAPP FAB
+    ======================== -->
+    <!-- ========================
+    FLOATING CALL BUTTON
+    ======================== -->
+    <a href="tel:+254720399712" class="phone-float" aria-label="Call our team">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.42 2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="phone-tooltip">Call our team</span>
+    </a>
+
+    <!-- ========================
+    WHATSAPP FAB
+    ======================== -->
+    <a class="whatsapp-float" href="https://wa.me/254720399712?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20a%20Unique%20Experience" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.999 2C6.477 2 2 6.477 2 12c0 1.89.524 3.655 1.436 5.163L2 22l4.979-1.405C8.376 21.479 10.138 22 12 22c5.523 0 10-4.477 10-10S17.523 2 11.999 2zm0 18.18c-1.702 0-3.28-.47-4.63-1.283l-.332-.197-3.454.975 1.013-3.378-.217-.348A8.18 8.18 0 0 1 3.82 12c0-4.514 3.666-8.18 8.18-8.18 4.513 0 8.18 3.666 8.18 8.18 0 4.513-3.667 8.18-8.181 8.18z"/></svg>
+        <span class="whatsapp-tooltip">Chat on WhatsApp</span>
+    </a>
+
+
+    <!-- ========================
+    STICKY CTA BAR
+    ======================== -->
+    <div class="sticky-cta-bar" id="sticky-cta-bar" role="complementary" aria-label="Quick booking call to action">
+        <p class="sticky-cta-text"><strong>Ready to elevate your perspective?</strong> Book your unique experience today.</p>
+        <a href="index.html#contact" class="sticky-cta-btn">
+            Design Your Journey
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+    </div>
+
+    <!-- ========================
+    SCRIPTS
+    ======================== -->
+    <script src="js/script.js"></script>
+    <script src="js/safari-page.js"></script>
+
+</body>
+</html>
