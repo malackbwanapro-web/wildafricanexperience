@@ -1437,6 +1437,27 @@ ul { list-style: none; }
 }
 
 /* ========================================
+   STICKY BAR ACTIVE — Lift floating buttons
+   so they clear the sticky CTA strip
+======================================== */
+body.sticky-bar-active .whatsapp-float {
+  bottom: 100px;
+}
+
+body.sticky-bar-active .phone-float {
+  bottom: 172px;
+}
+
+@media (max-width: 768px) {
+  body.sticky-bar-active .whatsapp-float {
+    bottom: 134px;
+  }
+  body.sticky-bar-active .phone-float {
+    bottom: 198px;
+  }
+}
+
+/* ========================================
    CORPORATE RETREATS & TEAM BUILDING
 ======================================== */
 .retreats {

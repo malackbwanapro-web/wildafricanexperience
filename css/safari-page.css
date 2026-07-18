@@ -1104,8 +1104,8 @@
   padding: 12px clamp(24px, 5vw, 64px);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  justify-content: center;
+  gap: 32px;
   transform: translateY(100%);
   transition: transform 0.4s var(--ease-luxury);
 }
@@ -1360,9 +1360,8 @@
   .pkg-header { flex-direction: column; gap: 12px; margin-bottom: 40px; }
   .pkg-meta-strip { flex-direction: column; gap: 10px; }
   .meta-pill { align-self: flex-start; }
-  .sticky-cta-bar { flex-direction: column; align-items: stretch; text-align: center; }
-  .sticky-cta-btn { justify-content: center; }
-  .whatsapp-fab { bottom: 72px; right: 20px; }
+  .sticky-cta-bar { flex-direction: column; align-items: center; text-align: center; gap: 12px; padding: 16px 24px; }
+  .sticky-cta-btn { justify-content: center; width: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {

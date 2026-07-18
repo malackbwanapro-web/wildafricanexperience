@@ -123,8 +123,10 @@ if (stickyCta) {
   window.addEventListener('scroll', () => {
     if (window.scrollY > 500) {
       stickyCta.classList.add('visible');
+      document.body.classList.add('sticky-bar-active');
     } else {
       stickyCta.classList.remove('visible');
+      document.body.classList.remove('sticky-bar-active');
     }
   }, { passive: true });
 }
