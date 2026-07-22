@@ -1232,6 +1232,25 @@ ul { list-style: none; }
   color: white;
 }
 
+/* Phone Input Group with Country Code */
+.phone-input-group {
+  display: flex;
+  gap: 8px;
+}
+
+.country-select {
+  width: 140px;
+  flex-shrink: 0;
+  padding-right: 26px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.phone-input-group .form-input {
+  flex: 1;
+  min-width: 0;
+}
+
 .form-textarea {
   resize: vertical;
   min-height: 100px;

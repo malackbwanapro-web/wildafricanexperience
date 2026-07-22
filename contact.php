@@ -29,14 +29,17 @@ function clean($val) {
 }
 
 // Read fields
-$firstName  = clean($_POST['firstName'] ?? '');
-$lastName   = clean($_POST['lastName'] ?? '');
-$email      = filter_var(trim($_POST['email'] ?? ''), FILTER_SANITIZE_EMAIL);
-$phone      = clean($_POST['phone'] ?? '');
-$experience = clean($_POST['experience'] ?? '');
-$travelers  = clean($_POST['travelers'] ?? '');
-$details    = clean($_POST['details'] ?? '');
-$source     = clean($_POST['source'] ?? 'Website');
+$firstName   = clean($_POST['firstName'] ?? '');
+$lastName    = clean($_POST['lastName'] ?? '');
+$email       = filter_var(trim($_POST['email'] ?? ''), FILTER_SANITIZE_EMAIL);
+$phone       = clean($_POST['phone'] ?? '');
+$contactPref = clean($_POST['contactPref'] ?? 'WhatsApp');
+$experience  = clean($_POST['experience'] ?? '');
+$travelers   = clean($_POST['travelers'] ?? '');
+$startDate   = clean($_POST['startDate'] ?? '');
+$endDate     = clean($_POST['endDate'] ?? '');
+$details     = clean($_POST['details'] ?? '');
+$source      = clean($_POST['source'] ?? 'Website');
 
 log_event("INQUIRY RECEIVED: $firstName $lastName <$email> ($phone)");
 
@@ -55,22 +58,34 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
-$fullName = $firstName . ' ' . $lastName;
-$toEmail  = 'joshua@wildafricanexperience.com';
-$date     = date('D, d M Y \a\t H:i T');
+// Server-side Phone Digits Check
+$phoneDigits = preg_replace('/\D/', '', $phone);
+if (strlen($phoneDigits) < 6 || strlen($phoneDigits) > 16) {
+    log_event("VALIDATION FAILED: invalid phone number format $phone");
+    http_response_code(400);
+    echo json_encode(['success' => false, 'message' => 'Please enter a valid phone number.']);
+    exit;
+}
+
+$fullName  = $firstName . ' ' . $lastName;
+$toEmail   = 'joshua@wildafricanexperience.com';
+$submitted = date('D, d M Y \a\t H:i T');
+$dateRange = ($startDate && $endDate) ? "$startDate to $endDate" : ($startDate ?: ($endDate ?: 'Flexible'));
 
 // ===== EMAIL TO JOSHUA =====
 $subject = "New Safari Inquiry — $fullName";
 
 $body = "NEW INQUIRY — THE WILD AFRICAN EXPERIENCE\n"
       . "==========================================\n"
-      . "Name:        $fullName\n"
-      . "Email:       $email\n"
-      . "Phone:       $phone\n"
-      . "Experience:  " . ($experience ?: '—') . "\n"
-      . "Travelers:   " . ($travelers ?: '—') . "\n"
-      . "Source:      $source\n"
-      . "Submitted:   $date\n\n"
+      . "Name:             $fullName\n"
+      . "Email:            $email\n"
+      . "Phone / WhatsApp: $phone\n"
+      . "Preferred Contact: $contactPref\n"
+      . "Experience:       " . ($experience ?: '—') . "\n"
+      . "Travelers:        " . ($travelers ?: '—') . "\n"
+      . "Travel Dates:     $dateRange\n"
+      . "Source:           $source\n"
+      . "Submitted:        $submitted\n\n"
       . "DETAILS / MESSAGE\n"
       . "-----------------\n"
       . ($details ?: 'No additional details provided.') . "\n\n"
@@ -92,12 +107,14 @@ $replySubject = "We have received your inquiry — The Wild African Experience";
 $replyBody = "Dear $firstName,\n\n"
            . "Thank you for reaching out to The Wild African Experience.\n\n"
            . "We have received your inquiry and one of our safari specialists will be\n"
-           . "in touch within 15-30 minutes during business hours (8 AM - 8 PM EAT).\n\n"
+           . "in touch via $contactPref within 15-30 minutes during business hours (8 AM - 8 PM EAT).\n\n"
            . "YOUR INQUIRY SUMMARY\n"
            . "--------------------\n"
-           . "Experience:  " . ($experience ?: '—') . "\n"
-           . "Travelers:   " . ($travelers ?: '—') . "\n"
-           . "Details:     " . ($details ?: '—') . "\n\n"
+           . "Preferred Contact: $contactPref\n"
+           . "Experience:        " . ($experience ?: '—') . "\n"
+           . "Travelers:         " . ($travelers ?: '—') . "\n"
+           . "Travel Dates:      $dateRange\n"
+           . "Details:           " . ($details ?: '—') . "\n\n"
            . "For urgent assistance, reach us directly:\n"
            . "  WhatsApp / Phone: +254 720 399 712\n"
            . "  Email:            joshua@wildafricanexperience.com\n\n"

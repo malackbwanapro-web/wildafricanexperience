@@ -64,6 +64,21 @@ document.addEventListener('DOMContentLoaded', () => {
       helper.style.display = this.value === '10+' ? 'block' : 'none';
     });
   }
+
+  // Set min dates to today for calendar inputs
+  const today = new Date().toISOString().split('T')[0];
+  const startDateInput = document.getElementById('field-start-date');
+  const endDateInput = document.getElementById('field-end-date');
+  if (startDateInput) startDateInput.min = today;
+  if (endDateInput) endDateInput.min = today;
+
+  if (startDateInput && endDateInput) {
+    startDateInput.addEventListener('change', function() {
+      if (this.value) {
+        endDateInput.min = this.value;
+      }
+    });
+  }
 });
 
 // ===== FORM HANDLING =====
@@ -78,21 +93,45 @@ function handleSubmit(e) {
   }
 
   // Compile form data
-  const firstName  = document.getElementById('field-first-name')?.value || '';
-  const lastName   = document.getElementById('field-last-name')?.value || '';
-  const email      = document.getElementById('field-email')?.value || '';
-  const phone      = document.getElementById('field-phone')?.value || '';
-  const experience = document.getElementById('inquiry-experience')?.value || '';
-  const travelers  = document.getElementById('inquiry-travelers')?.value || '';
-  const details    = document.getElementById('inquiry-details')?.value || '';
+  const firstName   = document.getElementById('field-first-name')?.value || '';
+  const lastName    = document.getElementById('field-last-name')?.value || '';
+  const email       = document.getElementById('field-email')?.value || '';
+  const countryCode = document.getElementById('field-country-code')?.value || '+254';
+  const rawPhone    = document.getElementById('field-phone')?.value || '';
+  const contactPref = document.getElementById('field-contact-pref')?.value || 'WhatsApp';
+  const experience  = document.getElementById('inquiry-experience')?.value || '';
+  const travelers   = document.getElementById('inquiry-travelers')?.value || '';
+  const startDate   = document.getElementById('field-start-date')?.value || '';
+  const endDate     = document.getElementById('field-end-date')?.value || '';
+  const details     = document.getElementById('inquiry-details')?.value || '';
+  const errorMsg    = document.getElementById('phone-error-msg');
+
+  // Phone Validation: strip non-digits to check length
+  const digitsOnly = rawPhone.replace(/\D/g, '');
+  if (digitsOnly.length < 6 || digitsOnly.length > 14) {
+    if (errorMsg) errorMsg.style.display = 'block';
+    if (btn) {
+      btn.textContent = 'Submit Inquiry';
+      btn.disabled = false;
+      btn.style.opacity = '1';
+    }
+    return;
+  } else {
+    if (errorMsg) errorMsg.style.display = 'none';
+  }
+
+  const fullPhone = `${countryCode} ${rawPhone.trim()}`;
 
   const formData = new FormData();
   formData.append('firstName', firstName);
   formData.append('lastName', lastName);
   formData.append('email', email);
-  formData.append('phone', phone);
+  formData.append('phone', fullPhone);
+  formData.append('contactPref', contactPref);
   formData.append('experience', experience);
   formData.append('travelers', travelers);
+  formData.append('startDate', startDate);
+  formData.append('endDate', endDate);
   formData.append('details', details);
   formData.append('source', 'Homepage Inquiry');
 
@@ -110,7 +149,7 @@ function handleSubmit(e) {
     } else {
       alert(data.message || 'There was an issue sending your message. Please reach us via WhatsApp.');
       if (btn) {
-        btn.textContent = 'Design Your Journey';
+        btn.textContent = 'Submit Inquiry';
         btn.disabled = false;
         btn.style.opacity = '1';
       }
@@ -118,7 +157,6 @@ function handleSubmit(e) {
   })
   .catch(err => {
     console.error('Submission error:', err);
-    // Fallback display success UI if network error happens on static environments or show alert
     const form = document.getElementById('inquiryForm');
     const success = document.getElementById('homepage-success');
     if (form) form.style.display = 'none';
@@ -127,12 +165,18 @@ function handleSubmit(e) {
 }
 window.handleSubmit = handleSubmit;
 
-
 // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     const href = this.getAttribute('href');
-    if (href === '#') return;
+    if (href === '#' || !href) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.pathname);
+      }
+      return;
+    }
 
     e.preventDefault();
     const target = document.querySelector(href);
@@ -140,6 +184,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       const offset = 80;
       const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
       window.scrollTo({ top, behavior: 'smooth' });
+      if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.pathname);
+      }
     }
   });
 });

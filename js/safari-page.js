@@ -52,6 +52,14 @@ function toggleBookingForm(packageId) {
 // Bind to window object for reliable execution from inline onclick handlers
 window.toggleBookingForm = toggleBookingForm;
 
+// Set min date for all date pickers on safari pages
+document.addEventListener('DOMContentLoaded', () => {
+  const today = new Date().toISOString().split('T')[0];
+  document.querySelectorAll('input[type="date"]').forEach(input => {
+    input.min = today;
+  });
+});
+
 // ---- Booking Form Submit ----
 document.querySelectorAll('.booking-form').forEach(form => {
   form.addEventListener('submit', function (e) {
@@ -61,35 +69,52 @@ document.querySelectorAll('.booking-form').forEach(form => {
     const success = card.querySelector('.booking-success');
     const submitBtn = this.querySelector('button[type="submit"]');
 
+    // Determine package name from card
+    const pkgTitle = card.querySelector('.pkg-title, h2, h3')?.textContent?.trim() || 'Safari Package';
+
+    // Compile fields
+    const nameVal      = this.querySelector('input[name="name"], input[id*="name"]')?.value || '';
+    const emailVal     = this.querySelector('input[type="email"]')?.value || '';
+    const countryCode  = this.querySelector('.country-select')?.value || '+254';
+    const rawPhone     = this.querySelector('input[type="tel"]')?.value || '';
+    const contactPref  = this.querySelector('select[name="contactPref"]')?.value || 'WhatsApp';
+    const guestsVal    = this.querySelector('select[name="guests"], select[name="travelers"], select[id*="guests"]')?.value || '';
+    const startDateVal = this.querySelector('input[name="startDate"]')?.value || '';
+    const endDateVal   = this.querySelector('input[name="endDate"]')?.value || '';
+    const notesVal     = this.querySelector('textarea')?.value || '';
+    const errorMsg     = this.querySelector('.phone-error-msg');
+
+    // Phone Validation: check digit length
+    const digitsOnly = rawPhone.replace(/\D/g, '');
+    if (digitsOnly.length < 6 || digitsOnly.length > 14) {
+      if (errorMsg) errorMsg.style.display = 'block';
+      return;
+    } else {
+      if (errorMsg) errorMsg.style.display = 'none';
+    }
+
     if (submitBtn) {
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending...';
     }
 
-    // Determine package name from card
-    const pkgTitle = card.querySelector('.pkg-title, h2, h3')?.textContent?.trim() || 'Safari Package';
-
-    // Compile fields
-    const nameVal  = this.querySelector('input[name="name"], input[id*="name"]')?.value || '';
-    const emailVal = this.querySelector('input[type="email"]')?.value || '';
-    const phoneVal = this.querySelector('input[type="tel"]')?.value || '';
-    const guestsVal = this.querySelector('select[name="guests"], select[name="travelers"], select[id*="guests"]')?.value || '';
-    const datesVal  = this.querySelector('input[name="dates"], input[id*="dates"]')?.value || '';
-    const notesVal  = this.querySelector('textarea')?.value || '';
-
     // Split name into first and last
     const nameParts = nameVal.trim().split(' ');
     const firstName = nameParts[0] || nameVal;
     const lastName  = nameParts.slice(1).join(' ') || '—';
+    const fullPhone = `${countryCode} ${rawPhone.trim()}`;
 
     const formData = new FormData();
     formData.append('firstName', firstName);
     formData.append('lastName', lastName);
     formData.append('email', emailVal);
-    formData.append('phone', phoneVal);
+    formData.append('phone', fullPhone);
+    formData.append('contactPref', contactPref);
     formData.append('experience', pkgTitle);
     formData.append('travelers', guestsVal);
-    formData.append('details', `Dates: ${datesVal || 'Flexible'}\nNotes: ${notesVal || 'None'}`);
+    formData.append('startDate', startDateVal);
+    formData.append('endDate', endDateVal);
+    formData.append('details', `Notes: ${notesVal || 'None'}`);
     formData.append('source', 'Package Drawer Form — ' + pkgTitle);
 
     fetch('/contact.php', {
