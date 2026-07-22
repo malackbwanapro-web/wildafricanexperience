@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 // ================================================
 // Wild African Experience — Contact Form Handler
 // ================================================
@@ -65,11 +65,12 @@ DETAILS / MESSAGE
 Reply directly to: $email
 ";
 
-$headers  = "From: noreply@wildafricanexperience.com\r\n";
+$headers  = "From: joshua@wildafricanexperience.com\r\n";
 $headers .= "Reply-To: $email\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-$sent = mail($toEmail, $subject, $body, $headers);
+$sent = mail($toEmail, $subject, $body, $headers, "-f joshua@wildafricanexperience.com");
 
 // ===== AUTO-REPLY TO CLIENT =====
 $replySubject = "We have received your inquiry — The Wild African Experience";
@@ -102,9 +103,10 @@ www.wildafricanexperience.com
 
 $replyHeaders  = "From: joshua@wildafricanexperience.com\r\n";
 $replyHeaders .= "Reply-To: joshua@wildafricanexperience.com\r\n";
+$replyHeaders .= "MIME-Version: 1.0\r\n";
 $replyHeaders .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-mail($email, $replySubject, $replyBody, $replyHeaders);
+@mail($email, $replySubject, $replyBody, $replyHeaders, "-f joshua@wildafricanexperience.com");
 
 // ===== RESPONSE =====
 if ($sent) {
