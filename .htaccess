@@ -1,6 +1,10 @@
 ﻿# ================================================
 # The Wild African Experience — Apache .htaccess
+# cPanel Compatible Version
 # ================================================
+
+Options +FollowSymLinks
+Options -Indexes
 
 # === Force HTTPS ===
 RewriteEngine On
@@ -14,63 +18,29 @@ RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # === Custom 404 ===
 ErrorDocument 404 /404.html
 
-# === Security Headers ===
-<IfModule mod_headers.c>
-    Header always set X-Frame-Options "SAMEORIGIN"
-    Header always set X-Content-Type-Options "nosniff"
-    Header always set Referrer-Policy "strict-origin-when-cross-origin"
-    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
-    Header always set X-XSS-Protection "1; mode=block"
-</IfModule>
-
 # === Gzip Compression ===
 <IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/html text/plain text/css
-    AddOutputFilterByType DEFLATE application/javascript application/json
-    AddOutputFilterByType DEFLATE image/svg+xml application/xml
+    AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json image/svg+xml
 </IfModule>
 
 # === Browser Caching ===
 <IfModule mod_expires.c>
     ExpiresActive On
-
-    # HTML — 1 hour
     ExpiresByType text/html "access plus 1 hour"
-
-    # CSS & JS — 1 year
     ExpiresByType text/css "access plus 1 year"
     ExpiresByType application/javascript "access plus 1 year"
-
-    # Images — 1 year
     ExpiresByType image/jpeg "access plus 1 year"
     ExpiresByType image/png "access plus 1 year"
     ExpiresByType image/webp "access plus 1 year"
-    ExpiresByType image/gif "access plus 1 year"
     ExpiresByType image/svg+xml "access plus 1 year"
     ExpiresByType image/x-icon "access plus 1 year"
-
-    # Fonts — 1 year
     ExpiresByType font/woff2 "access plus 1 year"
     ExpiresByType font/woff "access plus 1 year"
 </IfModule>
 
-# === Cache-Control Headers ===
+# === Security Headers ===
 <IfModule mod_headers.c>
-    <FilesMatch "\.(css|js|png|jpg|jpeg|gif|webp|svg|ico|woff|woff2)$">
-        Header set Cache-Control "public, max-age=31536000, immutable"
-    </FilesMatch>
-    <FilesMatch "\.(html|htm)$">
-        Header set Cache-Control "public, max-age=3600, must-revalidate"
-    </FilesMatch>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
-
-# === Remove .html Extension (Clean URLs) ===
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.html [NC,L]
-
-# === Block access to sensitive files ===
-<FilesMatch "(^\.htaccess|\.git)">
-    Order allow,deny
-    Deny from all
-</FilesMatch>
