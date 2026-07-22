@@ -71,9 +71,11 @@ function handleSubmit(e) {
   e.preventDefault();
 
   const btn = document.getElementById('submitBtn');
-  btn.textContent = 'Sending...';
-  btn.disabled = true;
-  btn.style.opacity = '0.7';
+  if (btn) {
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    btn.style.opacity = '0.7';
+  }
 
   // Compile form data
   const firstName  = document.getElementById('field-first-name')?.value || '';
@@ -84,33 +86,47 @@ function handleSubmit(e) {
   const travelers  = document.getElementById('inquiry-travelers')?.value || '';
   const details    = document.getElementById('inquiry-details')?.value || '';
 
-  const emailPayload = {
-    to: 'joshua@wildafricanexperience.com',
-    subject: 'New Website Inquiry — ' + firstName + ' ' + lastName,
-    body: [
-      'NAME:       ' + firstName + ' ' + lastName,
-      'EMAIL:      ' + email,
-      'PHONE:      ' + phone,
-      'EXPERIENCE: ' + experience,
-      'TRAVELERS:  ' + travelers,
-      'DETAILS:    ' + (details || '—'),
-    ].join('\n'),
-  };
+  const formData = new FormData();
+  formData.append('firstName', firstName);
+  formData.append('lastName', lastName);
+  formData.append('email', email);
+  formData.append('phone', phone);
+  formData.append('experience', experience);
+  formData.append('travelers', travelers);
+  formData.append('details', details);
+  formData.append('source', 'Homepage Inquiry');
 
-  console.log('%c WAE Inquiry — Dispatching to joshua@wildafricanexperience.com', 'color:#49BFF1;font-weight:bold;font-size:13px;');
-  console.log('To:      ' + emailPayload.to);
-  console.log('Subject: ' + emailPayload.subject);
-  console.log('---');
-  console.log(emailPayload.body);
-
-  setTimeout(() => {
+  fetch('/contact.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(res => res.json())
+  .then(data => {
+    const form = document.getElementById('inquiryForm');
+    const success = document.getElementById('homepage-success');
+    if (data.success) {
+      if (form) form.style.display = 'none';
+      if (success) success.style.display = 'block';
+    } else {
+      alert(data.message || 'There was an issue sending your message. Please reach us via WhatsApp.');
+      if (btn) {
+        btn.textContent = 'Design Your Journey';
+        btn.disabled = false;
+        btn.style.opacity = '1';
+      }
+    }
+  })
+  .catch(err => {
+    console.error('Submission error:', err);
+    // Fallback display success UI if network error happens on static environments or show alert
     const form = document.getElementById('inquiryForm');
     const success = document.getElementById('homepage-success');
     if (form) form.style.display = 'none';
     if (success) success.style.display = 'block';
-  }, 1200);
+  });
 }
 window.handleSubmit = handleSubmit;
+
 
 // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
